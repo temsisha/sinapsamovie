@@ -16,10 +16,9 @@ export default async function InstructorDetailPage({ params }: { params: Promise
         <section className="pad-section">
             <div className="container">
                 <nav className="back-nav">
-                    <Link href="/instructors">← Back to Instructors</Link>
+                    <Link href="/directors">← Back to Directors</Link>
                 </nav>
-                <div className="profile-hero">
-                    <div className="avatar avatar-lg">{initials(instructor.name)}</div>
+                <div>
                     <div className="profile-body">
                         <p className="eyebrow">{instructor.specialty}</p>
                         <h1 className="title-display">{instructor.name}</h1>
@@ -28,7 +27,7 @@ export default async function InstructorDetailPage({ params }: { params: Promise
                 </div>
                 <div className="courses-below">
                     <h2 className="title-section">
-                        Courses taught by {instructor.name.split(" ")[0]}
+                        Movies by {instructor.name.split(" ")[0]}
                     </h2>
                     {tauhtCourses.length === 0 ? (<span>No courses found.</span>) : (
                         <div className="grid-cards mt-sm">

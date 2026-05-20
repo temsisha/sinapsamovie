@@ -3,7 +3,7 @@ export default function Footer() {
         <footer className="site-footer">
           <div className="container">
             <p className="site-footer-copy">
-              Copyright &copy; 2026 LearnHub. All rights reserved.
+              Copyright &copy; 2026 MovieHub. All rights reserved.
             </p>
           </div>
         </footer>

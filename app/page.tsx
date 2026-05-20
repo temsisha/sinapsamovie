@@ -5,11 +5,11 @@ export default function Home() {
         <section className="hero">
           <div className="container pad-hero">
             <div className="hero-inner">
-              <span className="hero-pill">Learn build. Ship</span>
-              <h1 className="hero-title">Practical courses for developers</h1>
-              <p className="hero-lede">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum numquam veniam nulla, tenetur cumque quisquam maxime quibusdam sapiente deleniti hic ab repudiandae eos beatae laboriosam. Iusto natus iure eius dolores.</p>
+              <span className="hero-pill">Watch. Discover. Explore.</span>
+              <h1 className="hero-title">Discover movies worth watching</h1>
+              <p className="hero-lede">Explore a curated catalog of popular movies, legendary directors, genres, ratings, cast, languages, countries, and box office details — all in one place.</p>
               <div className="hero-actions">
-                <Link href="/courses" className="btn btn-primary">Browse Courses</Link>
+                <Link href="/movies" className="filter-btn active">Browse Movies</Link>
               </div>
             </div>
           </div>

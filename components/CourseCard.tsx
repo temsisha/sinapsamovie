@@ -11,8 +11,9 @@ export default function CourseCard({
     course: Course;
     instructorName: string;
 }) {
+    {console.log(course.image)}
     return (
-        <Link href={`/courses/${course.slug}`} className="card-link" key={course.id}>
+        <Link href={`/movies/${course.slug}`} className="card-link" key={course.id}>
             <div className="card-poster">
                 <Image src={course.image} alt={course.title} fill className="image" sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 200px" />
                 <div className="badge-row">
@@ -23,17 +24,12 @@ export default function CourseCard({
             <div className="card-body">
                 <h3 className="card-link-title">{course.title}</h3>
                 <p className="text-muted">{course.shortDescription}</p>
-                
-                {/* <div className="card-footer">
-                    <span>By {instructorName}</span>
-                    <span className="card-footer-cta"> View Course</span>
-                </div> */}
             </div>
             <div className="card-body">
                 <dl className="card-meta">
                     <div>
-                        <dt>Lessons</dt>
-                        <dd>{course.imdbRating}</dd>
+                        <dt>Language</dt>
+                        <dd>{course.language}</dd>
                     </div>
                     <div>
                         <dt>Duration</dt>

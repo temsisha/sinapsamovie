@@ -15,7 +15,7 @@ export default function CoursesCatalogClient({ courses, categories, ratings }: {
     const [level, setLevel] = useState<string>("all");
     const [category, setCategory] = useState<string>("all");
     const [query, setQuery] = useState<string>("");
-    const [rating, setRating] = useState<number | "all">("all");
+    const [rating, setRating] = useState<8 | 9 | "all">("all");
     
     const filtered = useMemo(() => {
         const q = query.trim().toLowerCase();
@@ -23,7 +23,7 @@ export default function CoursesCatalogClient({ courses, categories, ratings }: {
             const matchesQuery = q === "" || course.title.toLowerCase().includes(q);
             const matchesCategory = category === "all" || course.category === category;
             const matchesLevel = level === "all" || course.level === level;
-            const matchesRating = rating === "all" || course.imdbRating === rating;
+            const matchesRating = rating === "all" || course.imdbRating >= rating;
             return matchesQuery && matchesCategory && matchesLevel && matchesRating;
         })
     }, [query, courses,category, level, rating])
@@ -36,14 +36,10 @@ export default function CoursesCatalogClient({ courses, categories, ratings }: {
     }
 
     const isFiltering = query !== "" || category !== "all" || level !== "all" || rating !== "all";
-
     return (
         <div className="stack-md">
             <div className="panel">
                 <div className="grid-filters">
-                    {/* <div className="field">
-                        <input id="course-search" type="text" className="input" placeholder="e.g. Next.js" onChange={(e) => setQuery(e.target.value)} value={query} />
-                    </div> */}
                     <div className="site-nav">
                         <span className="filter-label">Genre:</span>
                         <div className="field">
@@ -69,20 +65,33 @@ export default function CoursesCatalogClient({ courses, categories, ratings }: {
                                 href="?rating=all"
                                 onClick={() => setRating("all")}
                             >
-                                {rating === "all" ? <button className="filter-btn active">All Ratings</button> : <button className="filter-btn">All Ratings</button>}
+                                {rating === "all" 
+                                ? <button className="filter-btn imdb">All</button> 
+                                : <button className="filter-btn">All</button>}
                             </Link>
-                            {/* {rankings.map((categoryItem) => (
+                            <div className="field">
                                 <Link
-                                    key={categoryItem}
-                                    href={`?category=${encodeURIComponent(categoryItem)}`}
-                                    onClick={() => setCategory(categoryItem)}
+                                    href="?rating=9"
+                                    onClick={() => setRating(9)}
                                 >
-                                    {category === categoryItem ? <button className="filter-btn active">{categoryItem}</button> : <button className="filter-btn">{categoryItem}</button>}
+                                    {rating === 9
+                                        ? <button className="filter-btn imdb">+9 IMDb</button>
+                                        : <button className="filter-btn">+9 IMDb</button>
+                                    }
                                 </Link>
-                            ))} */}
-                           
+
+                                <Link
+                                    href="?rating=8"
+                                    onClick={() => setRating(8)}
+                                >
+                                    {rating === 8
+                                        ? <button className="filter-btn imdb">+8 IMDb</button>
+                                        : <button className="filter-btn">+8 IMDb</button>
+                                    }
+                                </Link>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 <div className="filter-bar">
                     {isFiltering ? (<button className="btn-link" onClick={resetFilters}>Reset Filters</button>) : null}
                 </div>
