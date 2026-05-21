@@ -251,22 +251,7 @@ a {
   list-style: none;
 }
 
-/* .site-nav-link {
-  font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--muted);
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
 
-.site-nav-link:hover {
-  color: var(--text);
-} */
 
 .nav-links {
   display: flex;
