@@ -18,8 +18,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "LearnHub - Learn something new",
-  description: "LearnHub is modern platform for learning something new. We provide high quality courses and tutorials for everyone.",
+  title: "MovieHub - Discover Movies and Directors",
+  description: "MovieHub is a modern movie catalog where you can explore iconic films, legendary directors, genres, IMDb ratings, cast, languages, countries, and box office details.",
 };
 
 export default function RootLayout({

@@ -5,7 +5,7 @@ export default function Home() {
         <section className="hero">
           <div className="container pad-hero">
             <div className="hero-inner">
-              <span className="hero-pill">Watch. Discover. Explore.</span>
+              <span className="filter-btn">Watch. Discover. Explore.</span>
               <h1 className="hero-title">Discover movies worth watching</h1>
               <p className="hero-lede">Explore a curated catalog of popular movies, legendary directors, genres, ratings, cast, languages, countries, and box office details — all in one place.</p>
               <div className="hero-actions">

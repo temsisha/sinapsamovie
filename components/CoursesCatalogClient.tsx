@@ -38,6 +38,20 @@ export default function CoursesCatalogClient({ courses, categories, ratings }: {
     const isFiltering = query !== "" || category !== "all" || level !== "all" || rating !== "all";
     return (
         <div className="stack-md">
+            <div className="movies-hero">
+            <h1 className="movie-title">Explore the catalog</h1>
+            <p className="movie-lede">Movies, directors, ratings — all in one place.</p>
+            <form action="/search" method="get" className="movies-search-form">
+                <input
+                type="search"
+                id="movies-search-q"
+                className="input movies-search-input"
+                name="q"
+                autoComplete="off"
+                placeholder="Search movies..."
+                />
+            </form>
+        </div>
             <div className="panel">
                 <div className="grid-filters">
                     <div className="site-nav">

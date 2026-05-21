@@ -11,7 +11,7 @@ export default function Courses() {
         <div className="pad-section">
             <div className="container">
                 <div className="stack">
-                    <SectionTitle eyebrow="Catalog" title="All Movies" description="Browse all movies in the catalog. Use the filters to narrow them down by genre, or rating." />
+                    {/* <SectionTitle eyebrow="Catalog" title="All Movies" description="Browse all movies in the catalog. Use the filters to narrow them down by genre, or rating." /> */}
                     <CoursesCatalogClient courses = {courses} categories = {categories} levels = {levels} ratings = {ratings}/>
                 </div>
             </div>

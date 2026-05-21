@@ -22,13 +22,6 @@ export default function Header() {
                         </li>
                     </ul>
                 </nav>
-            
-            <div>
-                <form action="/search" method="get" className="header-search">
-                    <input type="search" id="header-search-q" className="input header-search-input" name="q" autoComplete="off" placeholder="Search movies..."/>
-                    <button type="submit" className="filter-btn active">Search</button>
-                </form>
-            </div>
         </header>
     )
 }
